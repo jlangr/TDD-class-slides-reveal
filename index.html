@@ -4,17 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Test-Driven Development: Foundations, v1.2</title>
+		<title>Test-Driven Development: Foundations v1.2</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/league.css">
-		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
-    <style>
-      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 { text-transform: none; }
+
+		<link rel="stylesheet" href="css/custom.css">
     </style>
 
 		<!-- Printing and PDF exports -->
@@ -126,6 +125,38 @@ expect(someArray).toContainEqual({ name: 'Amit' })</code></pre>
 
 <section>
 <h2>Exercise: (Test)-Code-Refactor</h2>
+<h4><em>aka</em> TDD Paint by Numbers</h4>
+
+  <img src="images/story.png" border="0" />
+  <p>See ./src/misc/name-normalizer.test.js</p>
+  <p>To run tests: npm run test:watch</p>
+</section>
+
+<section>
+<h2>Core TDD Themes</h2>
+
+<div>
+  <div style="width:282px">
+    <div style="float:left">
+      <img src="images/binary.png" border="0" height="354" width="282" style="padding-bottom:0.5em;float:left" />
+      <p><em>It's just code!</em></p>
+    </div>
+  </div>
+	<ul>
+    <span class="fragment"><li>Drive <em>behavior</em></li></span>
+    <span class="fragment"><li>Specification by example</li></span>
+    <span class="fragment"><li>Small increments</li></span>
+    <span class="fragment"><li>Stick to the cycle</li></span>
+    <span class="fragment">
+    <ul>
+      <li>Always see red</li>
+      <li>Always refactor</li>
+    </ul>
+    </span>
+	</ul>
+</div>
+
+<p><font size="-2">"BinaryCode," courtesy https://www.flickr.com/photos/132889348@N07/; License: https://creativecommons.org/licenses/by-sa/2.0/</font></p>
 </section>
 
           <!-- <footer><font size="-2">Copyright © Langr Software Solutions, Inc. 2019.  All rights reserved.</font></footer> -->

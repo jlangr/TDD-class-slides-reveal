@@ -4,3 +4,27 @@
   text-transform: none;
   font-family: "Times New Roman", Times, serif;
 }
+
+.bumper-container {
+  position: relative;
+  text-align: right;
+  color: white;
+}
+
+.upper-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.upper-center {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 75%;
+}
+
+/* 
+ not quite right
+*/

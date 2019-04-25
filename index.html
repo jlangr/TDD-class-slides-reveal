@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Test-Driven Development: Foundations, v1.2</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+    <style>
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 { text-transform: none; }
+    </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<!-- begin sections -->
+<section>
+<h3>Jeff Langr</h3>
+<h4>jeff@langrsoft.com</h4>
+<h4>@jlangr</h4>
+
+<img src="images/lss.png" />
+
+</section>
+
+<section>
+<h2>What's a Unit Test Look Like?</h2>
+
+	<pre><code data-trim data-noescape>
+describe('something', () => {
+  it(‘demonstrates some behavior', () => {
+    // Arrange
+
+    // Act
+
+    // Assert
+  })
+})
+	</code></pre>
+<p style="font-size:50%">The AAA mnemonic is courtesy of Bill Wake.</p>
+</section>
+
+<section>
+<h2>A Sample Test</h2>
+
+	<pre><code data-trim data-noescape>
+describe('an auto', () =>
+  const auto = new Auto()
+
+  it('idles engine when started', () => {
+    auto.depressBrake()
+
+    auto.pressStartButton()
+
+    expect(auto.RPM()).toBeWithinRange(950, 1100)
+  })
+})
+	</code></pre>
+</section>
+<section>
+
+<h2>What's an Assertion Look Like?</h2>
+<span class="fragment fade-in">
+<pre><code>expect(someCondition).toBe(true)</code></pre>
+</span>
+<span class="fragment fade-in">
+<pre><code>expect(idleSpeed).toBe(1000)</code></pre>
+</span>
+<span class="fragment fade-in">
+<code><pre>
+expect(alphabetizedName).toEqual('Schmoo, Kelly Loo')
+expect(someArray).toEqual(['O','T','F','F','F','S'])</code></pre>
+</span>
+<span class="fragment fade-in">
+<pre><code>expect(alphabetizedName).toMatch(/^S.*,/)</code></pre>
+</span>
+<span class="fragment fade-in">
+  <pre><code>expect(someVariable).toBeUndefined</code></pre>
+</span>
+<span class="fragment fade-in"> <code><pre>
+expect(idleSpeed).not.toEqual(42)
+expect(alphabetizedName).not.toEqual("Smelt"))))</code></pre>
+</span>
+<span class="fragment fade-in">
+<code><pre>expect(someArray).toHaveLength(3)
+expect(someArray).toContain(42)
+expect(someArray).toContainEqual({ name: 'Amit' })</code></pre>
+</span>
+
+<p style="font-size:50%">See <a href="https://jest-bot.github.io/jest/docs/expect.html" target="_blank">https://jest-bot.github.io/jest/docs/expect.html</a></p>
+</section>
+
+<section>
+<h2>Exercise: Simple Outcomes</h2>
+
+  <img src="images/story.png" border="0" />
+	<p>Flesh out the tests in ./src/misc/basics.test.js</p>
+</section>
+
+<section>
+<h2>Test-Driven Development</h2>
+  <div style="position:relative; width:640px; height:480px; margin:0 auto;">
+    <img class="fragment" width="469" height="471" src="images/tdd-1.png" style="position:absolute;top:0;left:10%;" />
+    <img class="fragment" width="469" height="471" src="images/tdd-2.png" style="position:absolute;top:0;left:10%;" />
+    <img class="fragment" width="469" height="471" src="images/tdd-3.png" style="position:absolute;top:0;left:10%;" />
+  </div>
+	<p>An incremental design technique.</p>
+</section>
+
+<section>
+<h2>Exercise: (Test)-Code-Refactor</h2>
+</section>
+
+          <!-- <footer><font size="-2">Copyright © Langr Software Solutions, Inc. 2019.  All rights reserved.</font></footer> -->
+
+<!-- end sections -->
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        slideNumber: true,
+        hash: true,
+				dependencies: [
+          //{ src: 'plugin/jump/jump.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+				]
+			});
+		</script>
+	</body>
+</html>
